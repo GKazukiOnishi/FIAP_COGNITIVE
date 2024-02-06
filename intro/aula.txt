@@ -1,0 +1,27 @@
+COGNITIVE
+
+	Computer Vision - Processamento de imagens
+		Python
+		OpenCV
+	IA -
+		Análise de dados com Panda
+		Machine Learning
+	IOT - Arduino
+	
+	
+1. Introdução ao processamento de imagens
+	Imagem Digital:
+		Matriz de linhas e colunas, os encontros são os pixels
+		O Valor do pixel representa a intensidade de cor naquele ponto específico
+			Cor colorida ou escala cinza
+		
+		Entrar no Google Colab com a conta do gmail
+		
+		RGB -
+			3 camadas, cada uma com uma intensidade da cor Red, Green e Blue
+		
+		BGR -
+			A imagem fica invertida
+			Sempre que plotamos vai vir nesse modelo, por isso precisamos inverter para ficar com as cores normal
+		
+	
