@@ -24,4 +24,14 @@ COGNITIVE
 			A imagem fica invertida
 			Sempre que plotamos vai vir nesse modelo, por isso precisamos inverter para ficar com as cores normal
 		
+	Imagem em tons de cinza
+		Usa só 1 canal de cor, então é mais leve, de mais fácil processamento
+		Cada canal com 256 possibilidades, de 0 a 255
 	
+	Interpolação
+		cv2.INTER_LINEAR - Forma de alterar resolução de imagem
+		Pega os vizinhos do pixels e faz uma média ponderada
+			A partir desse valor vai replicando de forma ponderada não aritmética
+		
+	
+		
