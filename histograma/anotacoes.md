@@ -10,4 +10,3 @@ Isso gera para a gente um aspecto, que permite definir certos aspectos de uma im
 - Se tende a ficar à esquerda temos uma **imagem escura**
 - Imagem pouco distribuídas tendem a ser de **baixo contraste**
 - Imagem muito bem distribuídas tendem a ser de **alto contraste**
-
