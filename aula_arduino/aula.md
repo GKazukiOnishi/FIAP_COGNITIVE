@@ -11,3 +11,4 @@ Slide sobre a história, tipos de arduíno, placas etc.
     * 220 Ohns é suficiente para uma LED
     * Quando conectar o arduíno, lembrar os lados positivos e negativos, e na IDE configurar a porta do arduíno em tools - port
     * No código, lembrar do pinMode para Input ou Output dependendo do que vai fazer (trigger e output, led é output, echo é input etc.)
+    * Ctrl Shift I na IDE para baixar libs externas (LiquidCrystal_I2C)
