@@ -67,7 +67,8 @@ Considerando uma taxa de aprendizagem = 0.1. Temos os seguintes cenários para o
 * Entrada A: 0.5 + (0.1 * 1 * 0) = 0.5
 Ou seja, 0.5 é um peso ideal para a rede neural.  
 <br>
-Perceba que ao treinar a mais do que o necessário, se a taxa de aprendizagem for muito alta, podemos acabar ultrapassando e não chegando a
+Perceba que ao treinar a mais do que o necessário, se a taxa de aprendizagem for muito alta, podemos acabar ultrapassando e não chegando a um bom neurônio.  
+
 
 
 
