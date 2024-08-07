@@ -69,6 +69,7 @@ Ou seja, 0.5 é um peso ideal para a rede neural.
 <br>
 Perceba que ao treinar a mais do que o necessário, se a taxa de aprendizagem for muito alta, podemos acabar ultrapassando e não chegando a um bom neurônio.  
 
-
+## Como costuma funcionar
+São um conjunto de filtros e cálculos aplicados nas entradas sequencialmente e condicionalmente, para então realizar os cálculos dos pesos e então obter um conjunto de saída.
 
 
