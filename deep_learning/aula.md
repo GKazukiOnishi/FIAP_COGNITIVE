@@ -74,3 +74,40 @@ São um conjunto de filtros e cálculos aplicados nas entradas sequencialmente e
 
 ## Perceptron
 É um modelo conhecido que representa um único neurônio
+
+# Rede Neural Multicamadas (MLP - Multilayer Perceptron)
+Diferente das redes de uma única camada, essas resolvem problemas mais complexos e costumam ter camadas ocultas (entre a entrada e a saída).  
+Elas já são capazes de identificar coisas mais complicadas envolvendo várias decisões, e talvez até mais de uma saída.  
+Na prática muda nada, a diferença é que a decisão também passará pelas camadas ocultas.  
+  
+Obs: Cada camada pode ter uma função de entrada diferente também.  
+  
+Também chamadas de **Redes Densas ou Fully-Connected**  
+
+## Qual a quantidade ideal de camadas ocultas?
+* 1 Camada Oculta: Resolve a maior parte de problemas não-lineares (Equações exponenciais, Segundo grau etc.)
+* 2 Camadas Ocultas: Conseguem expressar qualquer relação entre os dados, mesmo que não haja uma equação moldando o sistema
+* Mais de duas: Problemas complexos como visão computacional, carros autônomos, robótica, etc.  
+  
+## Quantos neurônios eu preciso na minha rede?
+* Camada de entrada: Equivalente à quantidade de variáveis que vão alimentar a rede
+* Camada de saída: Quantidade de classes ou valores a serem identificador (Sim ou não é só uma, se for mais de uma vai aumentando)
+* Quantidade de neurônios ocultos (entre as entrada e saídas)
+    * Varia Muito, mas tem dicas para guiar (slide). Ex: N = (Entrada + Saida)/2
+
+## Backpropagation
+Técnica para ajuste de pesos em uma rede neural, em que ele vai treinando e voltando para se ajustar.  
+Tem vários algoritmos (cada um com seu cálculo):
+* ADAM
+* SGD
+* ...
+
+## Funções de ativação
+* ReLU - Se negativo é 0, se positivo é o valor em si
+* Softmax - Distribui as classes em probabilidades para descobrir qual é mais provável dadas as entradas
+
+## Compilação de modelo
+É nessa etapa em que decidimos qual algoritmo utilizar para ajustar os pesos e realizar o treinamento.  
+
+## Treinamento
+Quando de fato executamos o treinamento, geralmente informando epochs, que indicam o total de vezes em que o código irá pegar dados para processar e treinar.  
