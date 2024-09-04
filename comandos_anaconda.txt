@@ -5,3 +5,10 @@ pip install matplotlib
 pip install notebook
 
 pip install scipy
+
+
+notebook
+matplotlib
+opencv-python
+tensorflow
+keras
