@@ -1,0 +1,37 @@
+<circuit version="1.1.0-SR0" rev="1917" stepSize="1000000" stepsPS="1000000" NLsteps="100000" reaStep="1000000" animate="0" >
+
+<item itemtype="Subcircuit" CircId="Uno-1" mainComp="false" Show_id="true" Show_Val="false" Pos="0,-132" rotation="0" hflip="1" vflip="1" label="Uno-1" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0" Logic_Symbol="false">
+<mainCompProps MainCompId="mega328-109" Frequency="16 MHz" Auto_Load="false" saveEepr="true" SerialMon="-1" />
+</item>
+
+<item itemtype="Ground" CircId="Ground-2" mainComp="false" Show_id="false" Show_Val="false" Pos="-204,-96" rotation="0" hflip="1" vflip="1" label="Ground-2" idLabPos="-16,8" labelrot="0" valLabPos="-16,20" valLabRot="0" />
+
+<item itemtype="Ground" CircId="Ground-3" mainComp="false" Show_id="false" Show_Val="false" Pos="-188,-24" rotation="0" hflip="1" vflip="1" label="Ground-3" idLabPos="-16,8" labelrot="0" valLabPos="-16,20" valLabRot="0" />
+
+<item itemtype="Resistor" CircId="Resistor-4" mainComp="false" ShowProp="Resistance" Show_id="false" Show_Val="true" Pos="-72,-16" rotation="0" hflip="1" vflip="1" label="Resistor-4" idLabPos="-16,-24" labelrot="0" valLabPos="-16,6" valLabRot="0" Resistance="100 Ω" />
+
+<item itemtype="Resistor" CircId="Resistor-5" mainComp="false" ShowProp="Resistance" Show_id="false" Show_Val="true" Pos="-72,-4" rotation="0" hflip="1" vflip="1" label="Resistor-5" idLabPos="-16,-24" labelrot="0" valLabPos="-16,6" valLabRot="0" Resistance="100 Ω" />
+
+<item itemtype="Led" CircId="Led-6" mainComp="false" Show_id="false" Show_Val="false" Pos="-136,-92" rotation="-180" hflip="1" vflip="1" label="Led-6" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Color="Yellow" Grounded="false" Threshold="2.4 V" MaxCurrent="30 mA" Resistance="0.6 Ω" />
+
+<item itemtype="Led" CircId="Led-7" mainComp="false" Show_id="false" Show_Val="false" Pos="-144,-4" rotation="-180" hflip="1" vflip="1" label="Led-7" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Color="Red" Grounded="false" Threshold="1.8 V" MaxCurrent="30 mA" Resistance="0.6 Ω" />
+
+<item itemtype="SerialPort" CircId="SerialPort-8" mainComp="false" Show_id="false" Show_Val="false" Pos="0,-192" rotation="0" hflip="1" vflip="1" label="SerialPort-8" idLabPos="-20,-32" labelrot="0" valLabPos="-16,20" valLabRot="0" Auto="false" Port="COM4" Baudrate="9600 _Bd" DataBits="8 _bits" StopBits="1 _bits" SerialMon="false" />
+
+<item itemtype="Connector" uid="Connector-1" startpinid="Resistor-4-rPin" endpinid="Uno-1-12" pointList="-56,-16,8,-16,8,-12" />
+
+<item itemtype="Connector" uid="Connector-2" startpinid="Resistor-5-rPin" endpinid="Uno-1-13" pointList="-56,-4,8,-4" />
+
+<item itemtype="Connector" uid="Connector-5" startpinid="Led-6-lPin" endpinid="Resistor-4-lPin" pointList="-120,-92,-120,-16,-88,-16" />
+
+<item itemtype="Connector" uid="Connector-6" startpinid="Led-7-lPin" endpinid="Resistor-5-lPin" pointList="-128,-4,-88,-4" />
+
+<item itemtype="Connector" uid="Connector-7" startpinid="Led-7-rPin" endpinid="Ground-3-Gnd" pointList="-160,-4,-160,-40,-188,-40" />
+
+<item itemtype="Connector" uid="Connector-8" startpinid="Led-6-rPin" endpinid="Ground-2-Gnd" pointList="-152,-92,-152,-112,-204,-112" />
+
+<item itemtype="Connector" uid="Connector-9" startpinid="SerialPort-8-pin0" endpinid="Uno-1-0" pointList="-40,-200,-64,-200,-64,-116,8,-116" />
+
+<item itemtype="Connector" uid="Connector-10" startpinid="SerialPort-8-pin1" endpinid="Uno-1-1" pointList="-40,-184,-40,-108,8,-108" />
+
+</circuit>

@@ -109,3 +109,42 @@ Configure também para iniciar o Node_red e observe no debug e no dashboard tudo
 ![alt text](alterando_voltagem)
 
 Perceba que ao alterar o valor aqui, o mesmo vai para o NodeRed
+
+## HiveMQ
+
+Entre em https://www.hivemq.com/demos/websocket-client/.
+Ele funciona rodando um Broker como servidor, que por sua vez recebe publicações, e tem outros que se subscrevem.  
+
+Podemos nos conectar, configurar um subscrição em uma String, e então todos subscritos nela podem ver aquilo que for publicado nela.  
+  
+Ao configurar um tópico com 4sis/#, por exemplo, qualquer tópico iniciando com 4sis/ irá receber a mensagem.  
+
+A ideia é configurar um NodeRed que receba tópicos através do MQTT, e então que envia para uma Porta COM3, por exemplo. Com isso no SimulIDE podemos configurar a porta COM4 para ligar uma LED por exemplo.  
+  
+```
+
+int led1 = 12;
+int led2 = 13;
+void setup() {
+  pinMode(led1, OUTPUT);
+  pinMode(led2, OUTPUT);
+  Serial.begin(9600);
+}
+
+void loop() {
+  if ( Serial.available() > 0){
+
+    char comando = Serial.read();
+    if(comando == '1'){
+      digitalWrite(led1, HIGH);
+    }else if( comando == '0'){
+      digitalWrite(led2, HIGH);
+    }
+
+
+  }
+
+}
+
+```
+  

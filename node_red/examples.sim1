@@ -1,0 +1,47 @@
+<circuit version="1.1.0-SR0" rev="1917" stepSize="1000000" stepsPS="1000000" NLsteps="100000" reaStep="1000000" animate="0" >
+
+<item itemtype="Subcircuit" CircId="Uno-1" mainComp="false" Show_id="true" Show_Val="false" Pos="-28,-96" rotation="0" hflip="1" vflip="1" label="Uno-1" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0" Logic_Symbol="false">
+<mainCompProps MainCompId="mega328-109" Frequency="16 MHz" Program="../../Users/labsfiap/Documents/Arduino/sketch_sep10a/build/arduino.avr.uno/sketch_sep10a.ino.hex" Auto_Load="false" saveEepr="true" SerialMon="-1" />
+</item>
+
+<item itemtype="SR04" CircId="SR04-2" mainComp="false" Show_id="false" Show_Val="false" Pos="-188,-192" rotation="0" hflip="1" vflip="1" label="SR04-2" idLabPos="-16,-48" labelrot="0" valLabPos="-16,20" valLabRot="0" />
+
+<item itemtype="Voltage Source" CircId="Voltage Source-3" mainComp="false" ShowProp="MaxValue" Show_id="false" Show_Val="true" Pos="-320,-232" rotation="0" hflip="1" vflip="1" label="Voltage Source-3" idLabPos="-32,-48" labelrot="0" valLabPos="-8,30" valLabRot="0" Running="true" Value_Volt="1.48 V" MaxValue="5 V" MinValue="0 V" />
+
+<item itemtype="SerialPort" CircId="SerialPort-4" mainComp="false" Show_id="false" Show_Val="false" Pos="-344,-72" rotation="0" hflip="1" vflip="1" label="SerialPort-4" idLabPos="-20,-32" labelrot="0" valLabPos="-16,20" valLabRot="0" Auto="false" Port="COM5" Baudrate="9600 _Bd" DataBits="8 _bits" StopBits="1 _bits" SerialMon="false" />
+
+<item itemtype="Resistor" CircId="Resistor-10" mainComp="false" ShowProp="Resistance" Show_id="false" Show_Val="true" Pos="-240,0" rotation="0" hflip="1" vflip="1" label="Resistor-10" idLabPos="-16,-24" labelrot="0" valLabPos="-16,6" valLabRot="0" Resistance="100 Ω" />
+
+<item itemtype="Resistor" CircId="Resistor-12" mainComp="false" ShowProp="Resistance" Show_id="false" Show_Val="true" Pos="-240,32" rotation="0" hflip="1" vflip="1" label="Resistor-12" idLabPos="-16,-24" labelrot="0" valLabPos="-16,6" valLabRot="0" Resistance="100 Ω" />
+
+<item itemtype="Led" CircId="Led-13" mainComp="false" Show_id="false" Show_Val="false" Pos="-324,0" rotation="-180" hflip="1" vflip="1" label="Led-13" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Color="Yellow" Grounded="false" Threshold="2.4 V" MaxCurrent="30 mA" Resistance="0.6 Ω" />
+
+<item itemtype="Led" CircId="Led-15" mainComp="false" Show_id="false" Show_Val="false" Pos="-324,32" rotation="-180" hflip="1" vflip="1" label="Led-15" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Color="Green" Grounded="false" Threshold="3.5 V" MaxCurrent="30 mA" Resistance="0.6 Ω" />
+
+<item itemtype="Ground" CircId="Ground-17" mainComp="false" Show_id="false" Show_Val="false" Pos="-380,16" rotation="0" hflip="1" vflip="1" label="Ground-17" idLabPos="-16,8" labelrot="0" valLabPos="-16,20" valLabRot="0" />
+
+<item itemtype="Ground" CircId="Ground-18" mainComp="false" Show_id="false" Show_Val="false" Pos="-380,48" rotation="0" hflip="1" vflip="1" label="Ground-18" idLabPos="-16,8" labelrot="0" valLabPos="-16,20" valLabRot="0" />
+
+<item itemtype="Connector" uid="Connector-1" startpinid="SR04-2-trigpin" endpinid="Uno-1-7" pointList="-188,-144,-188,-24,-20,-24" />
+
+<item itemtype="Connector" uid="Connector-2" startpinid="SR04-2-outpin" endpinid="Uno-1-8" pointList="-180,-144,-180,-8,-20,-8" />
+
+<item itemtype="Connector" uid="Connector-3" startpinid="Voltage Source-3-outPin" endpinid="SR04-2-inpin" pointList="-292,-216,-276,-216" />
+
+<item itemtype="Connector" uid="Connector-4" startpinid="SerialPort-4-pin0" endpinid="Uno-1-0" pointList="-384,-80,-20,-80" />
+
+<item itemtype="Connector" uid="Connector-25" startpinid="SerialPort-4-pin1" endpinid="Uno-1-1" pointList="-384,-64,-72,-64,-72,-72,-20,-72" />
+
+<item itemtype="Connector" uid="Connector-27" startpinid="Led-15-lPin" endpinid="Resistor-12-lPin" pointList="-308,32,-256,32" />
+
+<item itemtype="Connector" uid="Connector-28" startpinid="Resistor-12-rPin" endpinid="Uno-1-13" pointList="-224,32,-20,32" />
+
+<item itemtype="Connector" uid="Connector-33" startpinid="Led-15-rPin" endpinid="Ground-18-Gnd" pointList="-340,32,-380,32" />
+
+<item itemtype="Connector" uid="Connector-34" startpinid="Led-13-rPin" endpinid="Ground-17-Gnd" pointList="-340,0,-380,0" />
+
+<item itemtype="Connector" uid="Connector-35" startpinid="Led-13-lPin" endpinid="Resistor-10-lPin" pointList="-308,0,-256,0" />
+
+<item itemtype="Connector" uid="Connector-36" startpinid="Resistor-10-rPin" endpinid="Uno-1-12" pointList="-224,0,-132,0,-132,24,-20,24" />
+
+</circuit>
