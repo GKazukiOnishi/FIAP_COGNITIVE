@@ -90,3 +90,22 @@ Depois dê start e na placa, em main, configure o início da Serial.
   
 Depois Stop.  
   
+Instale a porta COM
+
+![alt text](config_com.png)
+
+![alt text](img_config_com)
+
+![alt text](ext_serial.png)
+
+![alt text](com_node_red.png)
+
+![alt text](com_nore_red_1.png)
+
+![alt text](iniciando_tudo)
+
+Configure também para iniciar o Node_red e observe no debug e no dashboard tudo aparecendo.  
+  
+![alt text](alterando_voltagem)
+
+Perceba que ao alterar o valor aqui, o mesmo vai para o NodeRed
