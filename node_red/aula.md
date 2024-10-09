@@ -38,7 +38,7 @@ Ele permite de forma low-code uma integração muito fácil de diferentes dispos
 
 ![alt text](img_dashboard_view.png)
 
-![alt text](img_export_flow)
+![alt text](img_export_flow.png)
 
 Obs: Importar arquivos flows.json etc.  
 
@@ -94,7 +94,7 @@ Instale a porta COM
 
 ![alt text](config_com.png)
 
-![alt text](img_config_com)
+![alt text](img_config_com.png)
 
 ![alt text](ext_serial.png)
 
@@ -102,11 +102,11 @@ Instale a porta COM
 
 ![alt text](com_nore_red_1.png)
 
-![alt text](iniciando_tudo)
+![alt text](iniciando_tudo.png)
 
 Configure também para iniciar o Node_red e observe no debug e no dashboard tudo aparecendo.  
   
-![alt text](alterando_voltagem)
+![alt text](alterando_voltagem.png)
 
 Perceba que ao alterar o valor aqui, o mesmo vai para o NodeRed
 
