@@ -59,11 +59,12 @@ void loop() {
   dist = pulseIn(echo, HIGH);
   dist = dist / 58;
   Serial.println(dist);
+  delay(2000);
 
-  int temp = dht.readTemperature();
-  int umi = dht.readHumidity();
-  Serial.println(temp);
-  Serial.println(umi);
+  //int temp = dht.readTemperature();
+  //int umi = dht.readHumidity();
+  //Serial.println(temp);
+  //Serial.println(umi);
 
   // Se alguém digitar algo na Serial entra aqui
   if (Serial.available() > 0) {
@@ -82,8 +83,61 @@ void loop() {
   }
 }
 
-
 ```
 
 ## Conexão
 Usar Arduíno UNO e conectar com o PC, precisa ligar a luzinha e depois precisa aparecer uma porta COM 5 ou 6 em Tools Port.
+
+## NodeRed
+Abrir CMD e digitar node-red, depois acessar localhost na porta da aplicação
+* ManagePallete
+  * Install
+    * serial -> Primeira
+* SerialIn - Lembrar de fechar a porta Serial da IDE Arduíno e de verificar a COM
+  * ![alt text](img_serial_in.png)
+* Se não funcionar a conexão, desconecta e conecta o Arduíno
+* Código da function para enviar ao TagoIO
+* Request HTTP
+  * POST na api.tago.io/data
+* Para desconectar da COM, só troca para a COM50 e dá deploy
+* Podemos criar Buttons e enviar para uma Serial Out, isso permite enviar os payloads para mover o Servo e ligar/desligar a LED
+* Como ficou:
+  * ![alt text](img_fluxo_node.png)
+  * ![alt text](img_req_tago.png)
+
+```
+msg.headers = {
+    'Device-Token':'0b45f373-ac1b-40c7-acf8-d6173f9762dd', //O DeviceToken do TagoIO
+    'Content-Type':'application/json'
+};
+
+var action = [
+    {
+        'variable':'Distancia',
+        'unit':'cm',
+        'value':msg.payload,
+    }
+]
+
+msg.payload = action
+
+return msg;
+```
+
+## TagoIO
+* Device
+  * CustomHTTPS
+  * Podemos copiar o token dele na tela
+* Actions
+  * name action
+  * Variable
+  * type Post data to ednpoint using HTTP
+  * https://api.tago.io/data
+  * Criar
+  * Associar Single Device com o criado anteriormente
+  * Variável: distancia is Anything
+* Inspector
+  * Play
+* Dashboard
+  * Podemos criar várias coisas, tipo Cylinder, DynamicTable, Image Static etc.
+  * Só selecionar Device e a Variable
