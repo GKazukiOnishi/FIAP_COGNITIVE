@@ -1,4 +1,7 @@
 # Aula - Arduíno
+Modelo:  
+![alt text](img_modelo.png)
+
 Lembrar que:
 * Positivo - 5V
 * Negativo - GND
