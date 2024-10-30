@@ -115,13 +115,9 @@ void loop() {
     lcd.clear();
 
     lcd.setCursor(0, 1);
-    lcd.print("Temp");
-    lcd.setCursor(5, 1);
-    lcd.print(temp);
-    lcd.setCursor(8, 1);
-    lcd.print("Umi");
-    lcd.setCursor(12, 1);
-    lcd.print(umi);
+    lcd.print("Temp " + String(temp) + "C");
+    lcd.setCursor(9, 1);
+    lcd.print("Umi " + String(umi) + "%");
 
     if (alerta) {
       lcd.setCursor(0, 0);
