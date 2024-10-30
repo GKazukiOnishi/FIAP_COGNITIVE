@@ -18,6 +18,7 @@ int intervalTimer = 0;
 int lcdDelay = 1000;
 int lcdTimer = 0;
 bool alerta = false;
+String digitado = "";
 
 DHT dht(DHTPIN, DHTTYPE);
 LiquidCrystal_I2C lcd(ende,col,lin);
@@ -127,6 +128,15 @@ void loop() {
       lcd.print("OK");
     }
 
+    lcd.setCursor(7, 0);
+    lcd.print(digitado);
+
     lcdTimer = 0;
+  }
+
+  if (Serial.available() > 0) {
+    char caractere = Serial.read();
+    digitado += caractere;
+    //digitado = Serial.readString();
   }
 }
