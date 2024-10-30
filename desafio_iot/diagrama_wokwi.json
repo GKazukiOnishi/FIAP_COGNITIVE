@@ -64,7 +64,20 @@
         "left": 155.4,
         "attrs": { "volume": "0.1" }
       },
-      { "type": "wokwi-dht22", "id": "dht1", "top": -230.1, "left": 225, "attrs": {} }
+      {
+        "type": "wokwi-dht22",
+        "id": "dht1",
+        "top": -230.1,
+        "left": 225,
+        "attrs": { "humidity": "69", "temperature": "13.4" }
+      },
+      {
+        "type": "wokwi-lcd1602",
+        "id": "lcd1",
+        "top": -396.8,
+        "left": 82.4,
+        "attrs": { "pins": "i2c" }
+      }
     ],
     "connections": [
       [ "uno:5V", "bb1:bp.25", "red", [ "v19.7", "h118.4" ] ],
@@ -99,7 +112,13 @@
       [ "dht1:SDA", "bb1:27b.f", "", [ "$bb" ] ],
       [ "dht1:NC", "bb1:28b.f", "", [ "$bb" ] ],
       [ "dht1:GND", "bb1:29b.f", "", [ "$bb" ] ],
-      [ "bb1:27b.j", "uno:4", "green", [ "v67.2", "h-28.8" ] ]
+      [ "bb1:27b.j", "uno:4", "green", [ "v67.2", "h-28.8" ] ],
+      [ "lcd1:GND", "bb1:4b.f", "black", [ "h0" ] ],
+      [ "bb1:4b.j", "bb1:bn.3", "black", [ "v0" ] ],
+      [ "bb1:bp.4", "bb1:5b.j", "red", [ "v0" ] ],
+      [ "bb1:5b.f", "lcd1:VCC", "red", [ "v0" ] ],
+      [ "lcd1:SCL", "uno:A5", "green", [ "h-182.4", "v614.7", "h355.2" ] ],
+      [ "lcd1:SDA", "uno:A4", "green", [ "h-172.8", "v614.6", "h336" ] ]
     ],
     "dependencies": {}
   }
