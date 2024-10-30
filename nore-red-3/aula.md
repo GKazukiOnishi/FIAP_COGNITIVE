@@ -1,4 +1,6 @@
 # Aula - Arduíno
+Usar Wokwi  
+  
 Modelo:  
 ![alt text](img_modelo.png)
 
