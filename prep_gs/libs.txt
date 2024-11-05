@@ -1,0 +1,7 @@
+#include<DHT.h>
+#include<Servo.h>
+#include<ArduinoJson.h>
+
+dht11 - Dht sensor library - Adafruit
+ServoMotor - Já vem instalado geralmente
+arduinojson - ArduinoJson by Benoit - Blanchon
