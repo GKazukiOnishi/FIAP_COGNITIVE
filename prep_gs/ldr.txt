@@ -1,3 +1,6 @@
 Ao usar um LDR com o Arduíno, a perna da esquerda vai no positivo, 
 a da direita vai para o analógico A0 e um resistor é conectado com a mesma perna do analógico, 
-mas vai até o negativo
+mas vai até o negativo.  
+Tanto faz a perninha desde que o negativo esteja com um resistor também, isso é importante para
+não inverter a polaridade da medida.  
+Ele é um resistor sensível a luz.  
