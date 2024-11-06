@@ -50,6 +50,49 @@ void loop() {
 
   ldrValue = analogRead(LDR);
 
+  if (ldrValue < 300) {
+    digitalWrite(GREEN, HIGH);
+    digitalWrite(YELLOW, LOW);
+    digitalWrite(RED, LOW);
+  } else if (ldrValue < 700) {
+    digitalWrite(GREEN, LOW);
+    digitalWrite(YELLOW, HIGH);
+    digitalWrite(RED, LOW);
+  } else {
+    digitalWrite(GREEN, LOW);
+    digitalWrite(YELLOW, LOW);
+    digitalWrite(RED, HIGH);
+  }
+
+  char comando;
+  if (Serial.available() > 0) {
+    comando = Serial.read();
+    if (temp >= 40 && comando == '1') {
+      myServo.write(180);
+    } else if (temp >= 40 && comando == '0') {
+      myServo.write(0);
+    } else if (temp < 40 && comando == '0') {
+      myServo.write(0);
+    } else if (temp < 40 && comando == '1') {
+      myServo.write(180);
+    }
+  } else if (comando == NULL) {
+    if (temp >= 40) {
+      myServo.write(180);
+    } else {
+      myServo.write(0);
+    }
+  }
+
+  StaticJsonDocument<100>json;
+  json["Distancia"] = dist;
+  json["Luminosidade"] = ldrValue;
+  json["Temperatura"] = temp;
+  json["Umidade"] = umi;
+
+  serializeJson(json, Serial);
+  Serial.println();
+
   Serial.println("Distancia: " + String(dist));
   Serial.println("Temperatura: " + String(temp));
   Serial.println("Humidade: " + String(umi));
